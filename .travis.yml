@@ -27,5 +27,5 @@ addons:
       description: "One Must Fall 2097 Remake"
     notification_email: katajakasa@gmail.com
     build_command_prepend: cov-configure --gcc && cmake -DCMAKE_C_COMPILER=/usr/bin/gcc-6 -DCMAKE_BUILD_TYPE=Release -DUSE_TESTS=Off .
-    build_command: make -j
+    build_command: make -j && cat /home/travis/build/omf2097/openomf/cov-int/build-log.txt
     branch_pattern: coverity_scan
